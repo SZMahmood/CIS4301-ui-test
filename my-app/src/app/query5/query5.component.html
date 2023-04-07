@@ -1,4 +1,31 @@
-<p>query5 works!</p>
+<section class="top-banner-section">
+  <!-- The CSS grid area that displays the image (layer 1) -->
+  <div class="banner-image-div">
+    <img class="banner-image" src="https://www.unicef.org/sites/default/files/styles/hero_desktop/public/HeroDrinking%20Water%20report%20UN0389288.jpg?itok=YBLVEG40" alt="Banner Image" />
+  </div>
+  <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
+  <div class="banner-overlay-div"></div>
+  <!-- The CSS grid area that displays the content (layer 3) -->
+  <div class="banner-text-div">
+    <span class="banner-text">
+      <p class="banner-h1-text">Query 5: Life Expectancy & Death Caused by Unsafe Water</p>
+    </span>
+  </div>
+</section>
+<p>     </p>
+<mat-card class="example-card" appearance="raised">
+  <mat-card-title>Overview</mat-card-title>
+  <mat-card-content>
+      <h3>The colloquial query:</h3>
+      <p>For each year since 1990, what was the median life expectancy among countries that have reported more than 1% of annual deaths being caused by an unsafe water source?</p>
+      <p></p>
+      <h3>To edit the view:</h3>
+      <p>To edit the data you can view, click the edit view button and save your settings</p>
+  </mat-card-content>
+  <mat-card-actions align ="end">
+    <button mat-raised-button (click)="onClick()">Edit View</button>
+  </mat-card-actions>
+</mat-card>
 <table style="width:20%">
     <tr>
       <td><button mat-raised-button routerLink="/query4" routerLinkActive="active" ariaCurrentWhenActive="page">Previous</button></td>
