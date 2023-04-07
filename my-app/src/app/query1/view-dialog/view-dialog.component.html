@@ -1,0 +1,32 @@
+<p>view-dialog works!</p>
+
+<form>
+    <mat-form-field appearance="fill">
+      <mat-label>Time frequency</mat-label>
+      <mat-select name="food">
+        <mat-option *ngFor="let frequency of frequencies" [value]="frequency.value">
+          {{ frequency.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>Selected frequency: {{ selectedValue }}</p>
+    <p></p>
+    <h3>Select Year Range</h3>
+        <mat-slider min="1960" max="2020" showTickMarks discrete align="center">
+            <input value = "1990" matSliderStartThumb>
+            <input value="2010" matSliderEndThumb>
+          </mat-slider>
+    
+    <br>
+        <mat-button-toggle-group value="graph" align="center">
+            <mat-button-toggle>
+              <mat-icon>multiline_chart</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="map">
+              <mat-icon>public</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+
+  </form>
+
+
