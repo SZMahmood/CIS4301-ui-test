@@ -1,24 +1,28 @@
-<p>view-dialog works!</p>
 
 <form>
-    <mat-form-field appearance="fill">
+    <h2 align="center">Edit the Displayed Data</h2>
+    <p align="center"><mat-form-field appearance="fill">
       <mat-label>Time frequency</mat-label>
-      <mat-select name="food">
+      <mat-select name="frequency">
         <mat-option *ngFor="let frequency of frequencies" [value]="frequency.value">
           {{ frequency.viewValue }}
         </mat-option>
       </mat-select>
-    </mat-form-field>
-    <p>Selected frequency: {{ selectedValue }}</p>
+    </mat-form-field></p>
     <p></p>
-    <h3>Select Year Range</h3>
-        <mat-slider min="1960" max="2020" showTickMarks discrete align="center">
-            <input value = "1990" matSliderStartThumb>
-            <input value="2010" matSliderEndThumb>
-          </mat-slider>
+    <h3 align="center"><b>Select Year Range</b></h3>
+    <p align="center">
+      <mat-slider min="1960" max="2020" showTickMarks discrete align="center">
+        <input value = "1990" matSliderStartThumb>
+        <input value="2010" matSliderEndThumb>
+      </mat-slider>
+    </p>
+        
     
     <br>
-        <mat-button-toggle-group value="graph" align="center">
+    <h3 align="center"><b>Choose Map or Graph View</b></h3>
+        <p align="center">
+          <mat-button-toggle-group value="graph" align="center">
             <mat-button-toggle>
               <mat-icon>multiline_chart</mat-icon>
             </mat-button-toggle>
@@ -26,6 +30,7 @@
               <mat-icon>public</mat-icon>
             </mat-button-toggle>
         </mat-button-toggle-group>
+        </p>
 
   </form>
 
