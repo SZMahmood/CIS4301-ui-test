@@ -10,10 +10,16 @@ interface Frequency {
   styleUrls: ['./view-dialog.component.scss']
 })
 export class ViewDialogComponent {
-  selectedValue!: string;
+  //selectedValue!: string;
+  rangeSvalue!: number;
+  rangeEvalue!: number;
   frequencies: Frequency[] = [
     {value: 'annually-0', viewValue: 'Annually'},
     {value: 'semi-annually-1', viewValue: 'Semi-annually'},
     {value: 'triannually-2', viewValue: 'Triannually'},
   ];
+  selectedValue = this.frequencies[0].value;
+
+  
+
 }

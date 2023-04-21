@@ -3,18 +3,19 @@
     <h2 align="center">Edit the Displayed Data</h2>
     <p align="center"><mat-form-field appearance="fill">
       <mat-label>Time frequency</mat-label>
-      <mat-select name="frequency">
+      <mat-select name="frequency" [(value)]="selectedValue">
         <mat-option *ngFor="let frequency of frequencies" [value]="frequency.value">
           {{ frequency.viewValue }}
         </mat-option>
       </mat-select>
     </mat-form-field></p>
+    <p align="center">You selected: {{selectedValue}}</p>
     <p></p>
     <h3 align="center"><b>Select Year Range</b></h3>
     <p align="center">
-      <mat-slider min="1960" max="2020" showTickMarks discrete align="center">
-        <input value = "1990" matSliderStartThumb>
-        <input value="2010" matSliderEndThumb>
+      <mat-slider min="1960" max="2020" discrete>
+        <input matSliderStartThumb value2="2010">
+        <input value2="2010" matSliderEndThumb>
       </mat-slider>
     </p>
         
