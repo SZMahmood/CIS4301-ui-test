@@ -1,0 +1,38 @@
+<form>
+  <h2 align="center">Edit the Displayed Data</h2>
+  <p align="center"><mat-form-field appearance="fill">
+    <mat-label>Time frequency</mat-label>
+    <mat-select name="frequency" value="selectedValue" [(ngModel)]="data.frequency">
+      <mat-option *ngFor="let frequency of frequencies" [value]="frequency.value">
+        {{ frequency.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field></p>
+  <p align="center">You selected: {{selectedValue}}</p>
+  <p></p>
+  <h3 align="center"><b>Select Year Range</b></h3>
+  <p align="center">
+    <mat-slider min="1960" max="2020" discrete>
+      <input matSliderStartThumb [(ngModel)]="data.rangeStart">
+      <input matSliderEndThumb [(ngModel)]="data.rangeEnd">
+    </mat-slider>
+  </p>
+     
+ 
+  <br>
+  <h3 align="center"><b>Choose Map or Graph View</b></h3>
+      <p align="center">
+        <mat-button-toggle-group value="graph" align="center">
+          <mat-button-toggle value="graph" [(ngModel)]="data.outputType">
+            <mat-icon>multiline_chart</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="map" [(ngModel)]="data.outputType">
+            <mat-icon>public</mat-icon>
+          </mat-button-toggle>
+      </mat-button-toggle-group>
+      </p>
+      <div mat-dialog-actions>
+          <button mat-button (click)="onNoClick()">No Thanks</button>
+          <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
+        </div>
+</form>

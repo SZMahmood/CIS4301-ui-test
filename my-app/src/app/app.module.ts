@@ -57,7 +57,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
-import { ViewDialogComponent } from './query1/view-dialog/view-dialog.component';
+//import { Query1DialogComponent } from './query1/query1-dialog.component';
 import { Query3Component } from './query3/query3.component';
 import { Query4Component } from './query4/query4.component';
 import { Query5Component } from './query5/query5.component';
@@ -65,6 +65,7 @@ import { Query6Component } from './query6/query6.component';
 import { Query7Component } from './query7/query7.component';
 import { Query8Component } from './query8/query8.component';
 import { Query9Component } from './query9/query9.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,7 @@ import { Query9Component } from './query9/query9.component';
     Query1Component,
     Query2Component,
     ContactComponent,
-    ViewDialogComponent,
+    //Query1DialogComponent,
     Query3Component,
     Query4Component,
     Query5Component,
@@ -135,7 +136,8 @@ import { Query9Component } from './query9/query9.component';
     DialogModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
