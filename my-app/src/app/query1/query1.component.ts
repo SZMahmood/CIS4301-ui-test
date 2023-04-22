@@ -1,12 +1,16 @@
-import { Component, Input, Inject, Output,OnInit } from '@angular/core';
+import { Component, Inject, NgModule, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { DialogData } from 'src/app/data.model';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 // ----------------- Button -----------------
 @Component({
   selector: 'app-query1',
   templateUrl: './query1.component.html',
-  styleUrls: ['./query1.component.scss']
+  styleUrls: ['./query1.component.scss'],
+  
 })
 
 
